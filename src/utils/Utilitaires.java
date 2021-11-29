@@ -1,12 +1,11 @@
 package utils;
 
-import java.util.Scanner;
-
 public class Utilitaires {
 	
 	int L = 10;
 	int H = 10;
 	char[][] map = new char[L][H];
+	
 	
 public static void printEcran(char[][] ecran) {
 		
@@ -40,14 +39,6 @@ public static void fillEcran(char[][] ecran) {
     
     
 }
-	
-        
 
-	
-	public String saisieUtilString() {
-		Scanner sc = new Scanner(System.in);
-		String s = sc.nextLine();
-		return s;
-	}
 }
 
