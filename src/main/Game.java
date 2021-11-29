@@ -10,6 +10,7 @@ public class Game {
 public void launch() {
 		
 		Utilitaires.fillEcran(ecran);
+		Utilitaires.printEcran(ecran);
 		
 }
 

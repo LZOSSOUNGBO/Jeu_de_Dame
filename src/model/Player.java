@@ -2,10 +2,10 @@ package model;
 
 public class Player {
 	int x,y;
-	char nom;
+	String nom;
 	
-	
-	public Player(int x, int y, char nom) {
+
+	public Player(int x, int y, String nom) {
 		super();
 		this.x = x;
 		this.y = y;
@@ -33,15 +33,14 @@ public class Player {
 	}
 
 
-	public char getNom() {
+	public String getNom() {
 		return nom;
 	}
 
 
-	public void setNom(char nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
 	
 
 }
