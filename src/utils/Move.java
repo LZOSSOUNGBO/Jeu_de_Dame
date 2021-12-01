@@ -20,17 +20,17 @@ public class Moves {
 		{
 			System.out.print("Choisissez un pion : ");
 			String choix = Utilitaires.saisieString().toLowerCase();
-			Utilitaires.writeDataInFile(choix.toLowerCase(), "./Mouvement.txt");
 			while (!hmP.containsKey(choix)) {
 
 				choix = Utilitaires.saisieString().toLowerCase();
+				Utilitaires.writeDataInFile(choix.toLowerCase(), "./Mouvement.txt");
 
 			}
 			System.out.print("Choisissez la position du pion : ");
 			String choix_pos = Utilitaires.saisieString();
-			Utilitaires.writeDataInFile(choix_pos.toLowerCase(), "./Mouvement.txt");
 			while (choix_pos == "") {
 				choix_pos = Utilitaires.saisieString();
+				Utilitaires.writeDataInFile(choix_pos.toLowerCase(), "./Mouvement.txt");
 				
 			}
 			int x = choix_pos.charAt(0);

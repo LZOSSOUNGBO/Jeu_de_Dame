@@ -18,8 +18,10 @@
     * main
     * model
     * utils
+    
 
-######  Explications du programme:
+######  Distribution des tâches:
+Nous avons travailler au même temps sur chaque fonction. En travaillant sur Visuel Studio Code, nous avons pu faire un Live Share afin de nous facilite les tâches.
 
    
 
