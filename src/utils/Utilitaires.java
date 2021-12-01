@@ -28,9 +28,12 @@ public class Utilitaires {
 	public static void nomUtilisateur() {
 
 		System.out.println("--------Jeu de Dame--------");
-		System.out.println("Entrez votre prénom please");
-		String nom = saisieString();
-		writeDataInFile(nom.toLowerCase(), "./info_player.txt");
+		System.out.println("Entrez le nom du premier joueur");
+		String nom1 = saisieString();
+		writeDataInFile(nom1.toLowerCase(), "./info_player.txt");
+		System.out.println("Entrez le nom du deuxieme joueur");
+		String nom2 = saisieString();
+		writeDataInFile(nom2.toLowerCase(), "./info_player.txt");
 
 	}
 
