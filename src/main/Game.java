@@ -10,7 +10,11 @@ import utils.Utilitaires;
 public class Game {
 	
 	
-	HashMap<String, Pion> hmP = new HashMap<String, Pion>();
+	public static HashMap<String, Pion> hmPB = new HashMap<String, Pion>();
+	public static HashMap<String, Pion> hmPN = new HashMap<String, Pion>();
+	public static HashMap<String, Pion> hmP = new HashMap<String, Pion>();
+
+
 	String[][] ecran = new String[10][10];
 
 	
@@ -29,3 +33,4 @@ public void launch() {
 }
 
 }
+

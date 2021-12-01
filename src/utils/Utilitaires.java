@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import main.Game;
 import model.Pion;
 
 public class Utilitaires {
@@ -51,7 +52,7 @@ public class Utilitaires {
 			//System.out.print(" | ");
 			for (int j = 0; j < ecran[i].length; j++) {
 
-				System.out.print("	" + ecran[i][j]);
+				System.out.print("	" + ecran[j][i]);
 
 			}
 			//System.out.println("|");
@@ -94,12 +95,14 @@ public class Utilitaires {
 
 				pB.setName(pB.getName() + String.valueOf(id));
 				hmP.put(pB.getName(), pB);
-				ecran[pB.getY()][pB.getX()] = pB.getName();
+				Game.hmPB.put(pB.getName(), pB);
+				ecran[pB.getX()][pB.getY()] = pB.getName();
 
 				// System.out.println(mapNoir[i].getX()+" "+mapNoir[i].getY());
 				pN.setName(pN.getName() + String.valueOf(id));
 				hmP.put(pN.getName(), pN);
-				ecran[pN.getY()][pN.getX()] = pN.getName();
+				Game.hmPN.put(pN.getName(), pN);
+				ecran[pN.getX()][pN.getY()] = pN.getName();
 				id++;
 			}
 
@@ -110,16 +113,21 @@ public class Utilitaires {
     public static void add_Boarders(String[][] ecran) {
         //String[] letters = new String[] { "A", "B", "C", "D", "E", "F", "G", "H"};
         String[] numbers = new String[] { "1", "2", "3", "4", "5", "6", "7", "8"};
-        ;
+        String[] reversenumbers = new String[] { "9","8", "7", "6", "5", "4", "3", "2"};
         for (int i = 1; i < ecran.length - 1; i++) {
             for (int j = 1; j < ecran[i].length - 1; j++) {
-            	ecran[0][j] = numbers[j - 1];
-            	ecran[ecran.length - 1][j] = numbers[j - 1];
+            	ecran[0][j] = reversenumbers[j - 1];
+            	ecran[ecran.length - 1][j] = reversenumbers[j - 1];
+           
             	ecran[i][0] = numbers[i - 1];
             	ecran[i][ecran[i].length - 1] = numbers[i - 1];
             	ecran[i][j] = ".";
+            
             }
+            
+    
         }
+      
     }
 
 }
